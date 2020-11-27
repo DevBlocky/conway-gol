@@ -8,14 +8,16 @@
 
 // random seed generator for different systems
 #ifdef WIN32
+
 #include <Windows.h>
+
 #define seed_rand srand(GetTickCount())
 #else
 #include <sys/time.h>
 #define seed_rand {\
-	struct timeval _time;\
-	gettimeofday(&_time, NULL);\
-	srand((_time.tv_sec * 1000) + (time.tv_usec / 1000));\
+    struct timeval _time;\
+    gettimeofday(&_time, NULL);\
+    srand((_time.tv_sec * 1000) + (time.tv_usec / 1000));\
 }
 #endif
 

@@ -168,7 +168,7 @@ gol_err gol_tostring(struct gameoflife *game, char **dest, const char *src) {
 
     // allocate memory for a string that contains all positions
     size_t len = ((size_t)game->cols + 1) /* +1 for '\n' */ * game->rows;
-	char *str = (char *) malloc(sizeof(char) * (len + 1 /* +1 for '\0' */));
+    char *str = (char *) malloc(sizeof(char) * (len + 1 /* +1 for '\0' */));
     if (str == NULL) return GOL_ERR_NOMEM;
 
     // get the characters to use from 'src'
