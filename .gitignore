@@ -1,0 +1,7 @@
+# IDE dirs
+.vs/
+.idea/
+
+# Build dirs
+cmake-build*/
+out/
